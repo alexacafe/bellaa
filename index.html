@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet">
+        <style>
+            body {
+                background-image: url("http://wallpaper.zone/img/4823768.jpg");
+                background-size: cover;
+                color:#E83750;
+                text-align: center;
+                font-size: 39px;
+                font-family: 'Lobster Two', cursive;
+            }
+
+            
+            button {
+                background-color: #11FF84; /* Green */
+                border:pink;
+                color:hotpink;
+                padding: 15px 32px;
+                text-align: center;
+                /*text-decoration:'Comfortaa', cursive;*/
+                font-family: 'Lobster Two', cursive;
+                display: inline-block;
+                font-size: 24px;
+            }
+            
+            #quotes {
+                background: rgb(255, 255, 255); /* Fallback for older browsers without RGBA-support */
+                background: rgba(255, 255, 255, 0.5);
+                width: 1300px;
+                margin: auto;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>cn
+       <h1>Bellaa</h1>
+        <button onclick="addQuote()">Add a quote</button>
+        <br><br>
+            <div id="quotes">
+                
+
+            </div>
+       
+     
+        <script>
+            var quotes = ["Be Happy ;)", "It takes just one seed to plant a forest of change. <br> - Alexa Ingram-Cauchi", "love yourself<3, <br> <br>  If your not smiling, your doing it wrong;)"];
+            
+            quotes.push("Hello there!");
+            
+            for (var q=0; q<quotes.length; q++ ){
+                document.getElementById("quotes").innerHTML+= "<div>"+ quotes[q] + "</div><br>";
+            }
+            
+            function addQuote(){
+                var newQuote = prompt ("eneter your quote below");
+                quotes.unshift(newQuote);
+                document.getElementById("quotes").innerHTML = ""
+                for (var q=0; q<quotes.length; q++ ){
+                    document.getElementById("quotes").innerHTML+= "<div>"+ quotes[q] + "</div><br>";
+                }
+            }
+        
+        </script>
+    </body>
+</html>
